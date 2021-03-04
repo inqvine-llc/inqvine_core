@@ -22,6 +22,7 @@ jobs:
     - run: 'sudo apt-get install lcov -y'
     - run: 'flutter config --no-analytics'
     - run: 'flutter pub global activate melos'
+    - run: 'echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH'
     - run: 'melos bootstrap'
     - run: 'melos run test'
     - if: ${{ always() }}
