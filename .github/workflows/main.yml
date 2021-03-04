@@ -23,6 +23,7 @@ jobs:
     - run: 'sudo apt-get update -qq -y'
     - run: 'sudo apt-get install lcov -y'
     - run: 'flutter pub global activate melos'
+    - run: 'export PATH="$PATH":"/opt/hostedtoolcache/flutter/2.0.0-stable/x64/.pub-cache/bin"'
     - run: 'melos run analyze'
     - run: 'melos run clean:flutter'
     - run: 'melos run build:runner'
