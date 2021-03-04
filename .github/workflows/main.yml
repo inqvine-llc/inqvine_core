@@ -10,14 +10,15 @@ name: Prepare and Build Packages
 jobs:
   test:
     runs-on: ubuntu-latest
+    container:
+      image: cirrusci/flutter:latest
     if: github.event_name == 'pull_request'
     timeout-minutes: 15
     steps:
     - uses: actions/checkout@v1
       with:
         fetch-depth: 0
-    - run: ./.github/workflows/scripts/install-flutter.sh dev
-    - run: ./.github/workflows/scripts/install-tools.sh
+    - run: './scripts/install-tools.sh'
     - run: 'melos bootstrap'
     - run: 'melos run test'
     - if: ${{ always() }}
