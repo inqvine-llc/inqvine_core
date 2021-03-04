@@ -64,9 +64,6 @@ abstract class BaseViewModel extends ChangeNotifier with LifecycleMixin {
   bool get hasException => _currentException != null;
 
   @mustCallSuper
-  Future<void> onExceptionOccured(dynamic exception) async {}
-
-  @mustCallSuper
   @override
   void onFirstRender() {
     super.onFirstRender();
@@ -88,7 +85,6 @@ abstract class BaseViewModel extends ChangeNotifier with LifecycleMixin {
     try {
       await function();
     } catch (ex) {
-      onExceptionOccured(ex);
       if (onError != null) {
         onError(ex);
       }
