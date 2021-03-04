@@ -16,9 +16,6 @@ jobs:
     - uses: actions/checkout@v1
       with:
         fetch-depth: 0
-    - uses: subosito/flutter-action@v1
-      with:
-        channel: 'stable'
     - run: ./.github/workflows/scripts/install-flutter.sh dev
     - run: ./.github/workflows/scripts/install-tools.sh
     - run: 'melos bootstrap'
