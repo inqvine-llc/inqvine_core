@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import '../inqvine_core_main.dart';
 
 extension InqvineContextExtensions on BuildContext {
+  Widget get safeBottomPaddingWidget => MediaQuery.of(this).padding.bottom.asHeightWidget;
+  Widget get safeTopPaddingWidget => MediaQuery.of(this).padding.top.asHeightWidget;
+
   bool get accessibleNavigation => MediaQuery.of(this).accessibleNavigation;
   bool get alwaysUser24HourFormat => MediaQuery.of(this).alwaysUse24HourFormat;
   bool get boldText => MediaQuery.of(this).boldText;
