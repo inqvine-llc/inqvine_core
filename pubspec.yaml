@@ -11,6 +11,18 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # State Management
+  flutter_hooks: ^0.16.0
+  riverpod: ^0.13.0
+  flutter_riverpod: ^0.13.0
+  get_it: ^6.0.0
+
+  # Data Classes
+  protobuf: ^2.0.0
+
+  # Debugging
+  logger: ^1.0.0-nullsafety.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

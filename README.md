@@ -2,13 +2,11 @@
 
 A new Flutter package project.
 
-## Getting Started
+## Compiling Proto
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+All the data classes are created and scoped using the protobuf templating language.  
+This allows for easy use between different programming languages, as well as statically typed condition checks against the objects.  
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Before you can compile, please follow the documentation at `https://developers.google.com/protocol-buffers/docs/darttutorial` to get protoc installed for your system.
+
+Then run the following from the root of your project: `protoc --dart_out=grpc:lib -Ipb proto/*.proto --proto_path .`
