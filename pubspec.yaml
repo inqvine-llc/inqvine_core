@@ -12,9 +12,7 @@ dependencies:
     sdk: flutter
 
   # State Management
-  flutter_hooks: ^0.16.0
-  riverpod: ^0.13.0
-  flutter_riverpod: ^0.13.0
+  hooks_riverpod: ^0.13.0
   get_it: ^6.0.0
 
   # Data Classes
@@ -26,5 +24,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  mockito: ^5.0.0
 
 flutter:

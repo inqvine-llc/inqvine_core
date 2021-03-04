@@ -13,6 +13,14 @@ class InqvineServices {
   GlobalKey<NavigatorState>? _currentNavigatorKey;
   GlobalKey<NavigatorState>? get currentNavigatorKey => _currentNavigatorKey;
 
+  BuildContext get context {
+    if (currentNavigatorKey == null || currentNavigatorKey?.currentState == null) {
+      throw Exception('');
+    }
+
+    return currentNavigatorKey!.currentState!.context;
+  }
+
   final GetIt _locator = GetIt.instance;
   final InqvineEventBus _eventBus = InqvineEventBus();
 
@@ -22,11 +30,11 @@ class InqvineServices {
 
   Stream<T> getEventStream<T>() => _eventBus.on<T>();
 
-  bool isServiceRegistered<T extends InqvineServiceBase>() {
+  bool isRegisteredInLocator<T extends Object>() {
     return _locator.isRegistered<T>();
   }
 
-  T getService<T extends InqvineServiceBase>() {
+  T getFromLocator<T extends Object>() {
     return _locator.get<T>();
   }
 
@@ -42,5 +50,5 @@ class InqvineServices {
   }
 
   //* Internal Service Getters
-  InqvineLoggerService get logger => getService<InqvineLoggerService>();
+  InqvineLoggerService get logger => getFromLocator<InqvineLoggerService>();
 }

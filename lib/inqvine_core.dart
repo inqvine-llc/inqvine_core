@@ -5,6 +5,8 @@ library inqvine_core;
 export 'events/inqvine_log_event.dart';
 export 'events/inqvine_event_bus.dart';
 
+export 'extensions/inqvine_context_extensions.dart';
+export 'extensions/inqvine_date_time_extensions.dart';
 export 'extensions/inqvine_string_extensions.dart';
 
 export 'hooks/inqvine_lifecycle_hook.dart';
@@ -21,6 +23,9 @@ export 'services/inqvine_services.dart';
 
 export 'package:get_it/get_it.dart';
 export 'package:flutter_hooks/flutter_hooks.dart';
+export 'package:flutter_riverpod/flutter_riverpod.dart';
+export 'package:hooks_riverpod/hooks_riverpod.dart';
+export 'package:riverpod/riverpod.dart';
 
 //* Imports
 
