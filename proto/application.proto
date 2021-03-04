@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Application {
+    string application_name = 1;
+    string application_version = 2;
+    string application_build_number = 3;
+
+    ApplicationType application_type = 4;
+
+    enum ApplicationType {
+        development = 0;
+        uat = 1;
+        alpha = 2;
+        beta = 3;
+        production = 4;
+    }
+}
