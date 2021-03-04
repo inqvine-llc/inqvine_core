@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:inqvine_core/inqvine_core.dart';
+import 'package:inqvine_core_main/inqvine_core_main.dart';
 
 void main() {
   final DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(256);

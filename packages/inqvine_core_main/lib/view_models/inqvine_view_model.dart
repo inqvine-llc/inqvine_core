@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../inqvine_core.dart';
+import '../inqvine_core_main.dart';
 
 T useViewModel<T extends BaseViewModel>(T Function() buildModel) {
   final bool hasOverridenViewModel = GetIt.instance.isRegistered<T>();

@@ -1,4 +1,4 @@
-library inqvine_core;
+library inqvine_core_main;
 
 //* Internal Exports
 

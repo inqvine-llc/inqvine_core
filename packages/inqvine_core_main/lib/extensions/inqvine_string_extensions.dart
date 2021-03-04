@@ -1,4 +1,4 @@
-import '../inqvine_core.dart';
+import '../inqvine_core_main.dart';
 
 extension InqvineStringExtensions on String {
   void logInfo({

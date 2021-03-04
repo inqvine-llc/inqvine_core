@@ -1,0 +1,49 @@
+name: InqvineCore
+
+packages:
+  - packages/**
+
+ignore:
+
+scripts:
+  analyze:
+    run: |
+      melos exec -c 5 -- \
+        dart analyze . --fatal-infos
+    description: |
+      Run `dart analyze` in all packages.
+       - Note: you can also rely on your IDEs Dart Analysis / Issues window.
+
+  test:
+    run: |
+      melos exec -c 6 --fail-fast -- \
+        "flutter test --no-pub"
+    description: Run `flutter test` for a specific package.
+    select-package:
+      dir-exists:
+        - test
+      ignore:
+        - "*web*"
+        - "*example*"
+
+  clean:git: >
+    git clean -x -d -f -q
+
+  clean:flutter: >
+    melos exec -c 6 -- "flutter clean"
+
+  pub:get: >
+    melos exec -c 6 -- "flutter pub get"
+
+  build:runner: >
+    melos exec -c 6 -- "flutter pub run build_runner build --delete-conflicting-outputs"
+
+  build:proto: >
+    melos exec -c 6 -- "protoc --dart_out=grpc:lib -Ipb proto/*.proto --proto_path ."
+
+dev_dependencies:
+  pedantic: 1.8.0
+
+environment:
+  sdk: ">=2.12.0-0 <3.0.0"
+  flutter: ">=1.12.13+hotfix.5 <2.0.0"

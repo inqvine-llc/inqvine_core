@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../inqvine_core.dart';
+import '../inqvine_core_main.dart';
 
 abstract class LifecycleMixin {
   @mustCallSuper

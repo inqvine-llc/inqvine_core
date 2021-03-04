@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import '../inqvine_core.dart';
+import '../inqvine_core_main.dart';
 
 class InqvineLoggerService extends InqvineServiceBase {
   InqvineLoggerService._privateConstructor();

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:inqvine_core/inqvine_core.dart';
+import '../inqvine_core_main.dart';
 
 /// Holds all Inqvine Core services through a singleton.
 /// These services must be initialized before they can be accessed.

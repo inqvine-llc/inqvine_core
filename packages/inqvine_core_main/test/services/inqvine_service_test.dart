@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:inqvine_core/inqvine_core.dart';
+import 'package:inqvine_core_main/inqvine_core_main.dart';
 
 void main() {
   testWidgets('Navigation keys can be passed through Inqvine Service to obtain context', (WidgetTester tester) async {
