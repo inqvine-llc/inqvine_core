@@ -9,6 +9,8 @@ export 'extensions/inqvine_context_extensions.dart';
 export 'extensions/inqvine_date_time_extensions.dart';
 export 'extensions/inqvine_string_extensions.dart';
 
+export 'helpers/inqvine_async_helpers.dart';
+
 export 'hooks/inqvine_lifecycle_hook.dart';
 
 export 'proto/application.pb.dart';
