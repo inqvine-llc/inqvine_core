@@ -1,0 +1,27 @@
+on:
+  pull_request_review:
+    types: [submitted]
+    branches: ['master','develop']
+
+  pull_request:
+    branches: ['master','develop']
+
+name: Prepare and Build Packages
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: cirrusci/flutter:latest
+    if: github.event_name == 'pull_request'
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+    - run: 'sudo apt-get update -qq -y'
+    - run: 'sudo apt-get install lcov -y'
+    - run: 'flutter config --no-analytics'
+    - run: 'flutter pub global activate melos'
+    - run: 'echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH'
+    - run: 'melos bootstrap'
+    - run: 'melos run test'
