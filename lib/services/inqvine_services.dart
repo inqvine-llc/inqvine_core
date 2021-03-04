@@ -34,9 +34,13 @@ class InqvineServices {
     return _locator.isRegistered<T>();
   }
 
+  Future<void> resetLocator() => _locator.reset();
+
   T getFromLocator<T extends Object>() {
     return _locator.get<T>();
   }
+
+  void registerInLocator<T extends Object>(T object) => _locator.registerSingleton<T>(object);
 
   Future<void> registerService<T extends InqvineServiceBase>(T service) async {
     'Registering a new service: $service'.logDebug();
