@@ -12,7 +12,6 @@ export 'extensions/inqvine_date_time_extensions.dart';
 export 'extensions/inqvine_design_extensions.dart';
 export 'extensions/inqvine_number_extensions.dart';
 export 'extensions/inqvine_string_extensions.dart';
-export 'extensions/inqvine_timestamp_extensions.dart';
 
 export 'helpers/inqvine_async_helpers.dart';
 export 'helpers/inqvine_design_helpers.dart';

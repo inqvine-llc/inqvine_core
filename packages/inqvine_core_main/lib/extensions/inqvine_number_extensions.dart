@@ -1,24 +1,5 @@
 import 'package:flutter/material.dart';
 
-extension InqvineDoubleExtensions on double {
-  Widget get asHeightWidget => SizedBox(height: this);
-  Widget get asWidthWidget => SizedBox(width: this);
-
-  EdgeInsets get asPaddingAll => EdgeInsets.all(this);
-  EdgeInsets get asPaddingT => EdgeInsets.only(top: this);
-  EdgeInsets get asPaddingTB => EdgeInsets.only(bottom: this, top: this);
-  EdgeInsets get asPaddingB => EdgeInsets.only(bottom: this);
-
-  EdgeInsets get asPaddingLTR => EdgeInsets.only(top: this, left: this, right: this);
-  EdgeInsets get asPaddingLBR => EdgeInsets.only(bottom: this, left: this, right: this);
-  EdgeInsets get asPaddingLR => EdgeInsets.symmetric(horizontal: this);
-  EdgeInsets get asPaddingL => EdgeInsets.only(left: this);
-  EdgeInsets get asPaddingR => EdgeInsets.only(right: this);
-
-  BorderRadius get asBorderRadiusCircular => BorderRadius.circular(this);
-  Radius get asRadiusCircular => Radius.circular(this);
-}
-
 extension InqvineIntExtensions on int {
   int get getRemainderInchesFromInches {
     return this.remainder(12);
