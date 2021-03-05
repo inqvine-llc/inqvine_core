@@ -6,7 +6,7 @@ Basic tooling used through all projects.
 
 ### Design extensions
 
-Design and Widget extensions
+Contains Design and Widget extensions on [Color] and [double]
 *) calculateTextForegroundColor (Returns black or white depending on the color supplied)
 
 *) asRadiusCircular (Converts a double to a border radius)
@@ -28,13 +28,13 @@ Padding Extensions from doubles
 
 ### Crypto extensions
 
-Cryptography and algorthimic functions built on the crypto package.  
+Cryptography and algorthimic functions built on the crypto package.
 *) toUtf8
 *) toSha1
 
 ### DateTime extensions
 
-A number of built in extensions for the DateTime object built on top of Jiffy.  
+A number of built in extensions for the [DateTime] object built on top of Jiffy.  
 *) asSecondsEpoch (Convert to seconds since epoch)
 *) hhmmadoMMMMyyyy (Format as hhmmadoMMMMyyyy)
 *) hhmma (Format as hhmma)
@@ -45,16 +45,11 @@ A number of built in extensions for the DateTime object built on top of Jiffy.
 *) toJiffy
 This package contains a variety of basic, commonly used utility extensions (and classes?/functions? etc).
 
-## Contents:
-
 ### Context Extensions
 Contains extensions on [BuildContext] for faster tidier use of MediaQueryData functions
 
 ### Number Extensions
 Contains extensions on [double] and [int] for converting to and from meters, feet, and inches
-
-### Design Extensions
-Contains extensions on [Color]
 
 ### String Extensions
 Contains extensions on [String] for logging events, errors, and general information
