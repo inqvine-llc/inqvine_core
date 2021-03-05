@@ -22,7 +22,7 @@ class InqvineServices {
   }
 
   final GetIt _locator = GetIt.instance;
-  final InqvineEventBus _eventBus = InqvineEventBus();
+  final EventBus _eventBus = EventBus();
 
   void setNavigationKey(GlobalKey<NavigatorState> navigatorKey) => _currentNavigatorKey = navigatorKey;
 

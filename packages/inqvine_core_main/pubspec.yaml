@@ -14,6 +14,7 @@ dependencies:
   # State Management
   hooks_riverpod: ^0.13.0
   get_it: ^6.0.0
+  event_bus: ^2.0.0
 
   # Data Classes
   protobuf: ^2.0.0
