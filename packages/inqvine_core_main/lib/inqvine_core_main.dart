@@ -30,6 +30,7 @@ export 'services/inqvine_services.dart';
 //* External Exports
 
 export 'package:get_it/get_it.dart';
+export 'package:jiffy/jiffy.dart';
 export 'package:flutter_hooks/flutter_hooks.dart';
 export 'package:flutter_riverpod/flutter_riverpod.dart';
 export 'package:hooks_riverpod/hooks_riverpod.dart';
