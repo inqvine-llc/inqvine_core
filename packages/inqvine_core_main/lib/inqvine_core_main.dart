@@ -7,6 +7,7 @@ export 'constants/inqvine_design_constants.dart';
 export 'events/inqvine_log_event.dart';
 
 export 'extensions/inqvine_context_extensions.dart';
+export 'extensions/inqvine_crypto_extensions.dart';
 export 'extensions/inqvine_date_time_extensions.dart';
 export 'extensions/inqvine_design_extensions.dart';
 export 'extensions/inqvine_number_extensions.dart';

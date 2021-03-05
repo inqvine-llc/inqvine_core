@@ -21,6 +21,7 @@ dependencies:
 
   # Tooling
   jiffy: ^4.0.0
+  crypto: ^3.0.0
 
   # Debugging
   logger: ^1.0.0-nullsafety.0
