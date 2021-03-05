@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 extension InqvineIntExtensions on int {
   int get getRemainderInchesFromInches {
     return this.remainder(12);

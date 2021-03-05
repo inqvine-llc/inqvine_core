@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:device_info/device_info.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../inqvine_core_main.dart';
@@ -51,7 +54,20 @@ class InqvineServices {
   Future<void> registerInqvineServices() async {
     'Registering Inqvine services'.logDebug();
     await registerService(InqvineLoggerService.instance);
+
+    final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
+    if (Platform.isIOS) {
+      final IosDeviceInfo iosDeviceInfo = await deviceInfoPlugin.iosInfo;
+      registerInLocator<IosDeviceInfo>(iosDeviceInfo);
+    } else if (Platform.isAndroid) {
+      final AndroidDeviceInfo androidDeviceInfo = await deviceInfoPlugin.androidInfo;
+      registerInLocator<AndroidDeviceInfo>(androidDeviceInfo);
+    }
   }
+
+  //* External Service Getters
+  AndroidDeviceInfo get androidDeviceInfo => getFromLocator<AndroidDeviceInfo>();
+  IosDeviceInfo get iosDeviceInfo => getFromLocator<IosDeviceInfo>();
 
   //* Internal Service Getters
   InqvineLoggerService get logger => getFromLocator<InqvineLoggerService>();
