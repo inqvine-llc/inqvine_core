@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:device_info/device_info.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../inqvine_core_main.dart';
@@ -56,18 +56,31 @@ class InqvineServices {
     await registerService(InqvineLoggerService.instance);
 
     final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
-    if (Platform.isIOS) {
-      final IosDeviceInfo iosDeviceInfo = await deviceInfoPlugin.iosInfo;
-      registerInLocator<IosDeviceInfo>(iosDeviceInfo);
-    } else if (Platform.isAndroid) {
-      final AndroidDeviceInfo androidDeviceInfo = await deviceInfoPlugin.androidInfo;
-      registerInLocator<AndroidDeviceInfo>(androidDeviceInfo);
+    switch (Platform.operatingSystem) {
+      case "windows":
+        registerInLocator<WindowsDeviceInfo>(await deviceInfoPlugin.windowsInfo);
+        break;
+      case "linux":
+        registerInLocator<LinuxDeviceInfo>(await deviceInfoPlugin.linuxInfo);
+        break;
+      case "macos":
+        registerInLocator<MacOsDeviceInfo>(await deviceInfoPlugin.macOsInfo);
+        break;
+      case "ios":
+        registerInLocator<IosDeviceInfo>(await deviceInfoPlugin.iosInfo);
+        break;
+      case "android":
+        registerInLocator<AndroidDeviceInfo>(await deviceInfoPlugin.androidInfo);
+        break;
     }
   }
 
   //* External Service Getters
-  AndroidDeviceInfo get androidDeviceInfo => getFromLocator<AndroidDeviceInfo>();
+  WindowsDeviceInfo get windowsDeviceInfo => getFromLocator<WindowsDeviceInfo>();
+  LinuxDeviceInfo get linuxDeviceInfo => getFromLocator<LinuxDeviceInfo>();
+  MacOsDeviceInfo get macOsDeviceInfo => getFromLocator<MacOsDeviceInfo>();
   IosDeviceInfo get iosDeviceInfo => getFromLocator<IosDeviceInfo>();
+  AndroidDeviceInfo get androidDeviceInfo => getFromLocator<AndroidDeviceInfo>();
 
   //* Internal Service Getters
   InqvineLoggerService get logger => getFromLocator<InqvineLoggerService>();
