@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 extension InqvineIntExtensions on int {
   /// Converts a given number of inches to feet, returns the remaining inches
   int get getRemainderInchesFromInches {

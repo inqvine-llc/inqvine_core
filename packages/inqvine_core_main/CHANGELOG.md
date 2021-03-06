@@ -1,3 +1,8 @@
+## [0.0.3-nullsafety.0] - Basic shared functionality and documentation
+
+* Improve web platform
+* Remove unused imports
+
 ## [0.0.2-nullsafety.0] - Basic shared functionality and documentation
 
 * Improve documentation
