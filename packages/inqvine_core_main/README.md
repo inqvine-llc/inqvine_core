@@ -1,6 +1,39 @@
-# inqvine_core_main
+# Inqvine Core Main
 
-Basic tooling used through all projects.
+Basic tooling used through all Inqvine projects.
+
+## Getting Started
+
+To get started using this package, perform the following actions:
+1) Add `await inqvine.registerInqvineServices()` to your main.dart
+2) Optionally register a `GlobalKey<NavigatorState>` to access context anywhere using `inqvine.setNavigationKey(key)`
+
+## Inqvine Service
+
+Think of this as a core place that all shared services can be accessed from.  
+You can call `inqvine.` anywhere in your app to find what we support.
+
+### Methods
+
+*) setNavigationKey -> Set a navigator key, so that functions dependent on context can be used, and context can be obtained via `inqvine.context`
+*) publishEvent -> Send any object down an event bus. This is useful for view model to view model or service to service communication.
+*) getEventStream -> Listen on an event bus for objects passed down from `publishEvent`.
+*) resetLocator -> Reset the entire dependency injection container. Useful for testing.
+*) isRegisteredInLocator -> Check the dependency injection container for a registered service.
+*) getFromLocator -> Get a service or object from the dependency container.
+*) registerInLocator -> Register anything inside of the dependency injection container.
+*) registerService -> Registers a service extending `InqvineServiceBase` in the dependency injection container, and then initialize it.
+*) registerInqvineServices -> Registers all generic Inqvine services
+
+### Available Default Services
+
+*) `inqvine.logger` -> Configuration for the logger service based on extension methods in `string_extensions`
+
+*) `inqvine.windowsDeviceInfo` -> Device information for the Windows Platform
+*) `inqvine.linuxDeviceInfo` -> Device information for the Linux Platform
+*) `inqvine.macosDeviceInfo` -> Device information for the MacOS Platform
+*) `inqvine.iosDeviceInfo` -> Device information for the iOS Platform
+*) `inqvine.androidDeviceInfo` -> Device information for the Android Platform
 
 ## Extensions
 

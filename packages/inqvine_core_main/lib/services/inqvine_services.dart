@@ -33,11 +33,11 @@ class InqvineServices {
 
   Stream<T> getEventStream<T>() => _eventBus.on<T>();
 
+  Future<void> resetLocator() => _locator.reset();
+
   bool isRegisteredInLocator<T extends Object>() {
     return _locator.isRegistered<T>();
   }
-
-  Future<void> resetLocator() => _locator.reset();
 
   T getFromLocator<T extends Object>() {
     return _locator.get<T>();
@@ -51,10 +51,9 @@ class InqvineServices {
     await service.initializeService();
   }
 
-  Future<void> registerInqvineServices() async {
-    'Registering Inqvine services'.logDebug();
-    await registerService(InqvineLoggerService.instance);
-
+  /// Register DeviceInfoPlus information dependent on platform
+  /// See: {@https://pub.dev/packages/device_info_plus}
+  Future<void> _registerDeviceInfo() async {
     final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
     switch (Platform.operatingSystem) {
       case "windows":
@@ -73,6 +72,13 @@ class InqvineServices {
         registerInLocator<AndroidDeviceInfo>(await deviceInfoPlugin.androidInfo);
         break;
     }
+  }
+
+  Future<void> registerInqvineServices() async {
+    'Registering Inqvine services'.logDebug();
+    await registerService(InqvineLoggerService.instance);
+
+    await _registerDeviceInfo();
   }
 
   //* External Service Getters
