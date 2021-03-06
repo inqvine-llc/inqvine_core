@@ -1,4 +1,8 @@
-## [0.0.1] - Basic shared functionality and documentation
+## [0.0.2-nullsafety.0] - Basic shared functionality and documentation
+
+* Improve documentation
+
+## [0.0.1-nullsafety.0] - Basic shared functionality and documentation
 
 * Include basic documentation around available services
 * Add basic readme with installation instructions
