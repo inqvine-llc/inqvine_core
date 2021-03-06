@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Basic shared functionality and documentation
 
-* TODO: Describe initial release.
+* Include basic documentation around available services
+* Add basic readme with installation instructions
+* Enable Null Safety Support
