@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import '../inqvine_core_main.dart';
 
 extension InqvineContextExtensions on BuildContext {
-  Widget get safeBottomPaddingWidget => MediaQuery.of(this).padding.bottom.asHeightWidget;
-  Widget get safeTopPaddingWidget => MediaQuery.of(this).padding.top.asHeightWidget;
+  //? Contains a selection of commonly used MediaQueryData functions to reduce visual clutter in code
+
+  Widget get safeBottomPaddingWidget =>
+      MediaQuery.of(this).padding.bottom.asHeightWidget;
+  Widget get safeTopPaddingWidget =>
+      MediaQuery.of(this).padding.top.asHeightWidget;
 
   bool get accessibleNavigation => MediaQuery.of(this).accessibleNavigation;
   bool get alwaysUser24HourFormat => MediaQuery.of(this).alwaysUse24HourFormat;
   bool get boldText => MediaQuery.of(this).boldText;
-  bool get isDarkMode => MediaQuery.of(this).platformBrightness == Brightness.dark;
+  bool get isDarkMode =>
+      MediaQuery.of(this).platformBrightness == Brightness.dark;
+
   double get devicePixelRatio => MediaQuery.of(this).devicePixelRatio;
   bool get disabledAnimations => MediaQuery.of(this).disableAnimations;
   bool get highContrast => MediaQuery.of(this).highContrast;
@@ -21,6 +27,9 @@ extension InqvineContextExtensions on BuildContext {
   EdgeInsets get viewInsets => MediaQuery.of(this).viewInsets;
   EdgeInsets get viewPadding => MediaQuery.of(this).viewPadding;
 
+  /// Returns the current ThemeData of this BuildContext
   ThemeData get theme => Theme.of(this);
+
+  /// Returns the current TextTheme data of this BuildContext
   TextTheme get textTheme => Theme.of(this).textTheme;
 }
