@@ -8,6 +8,7 @@ export 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'package:inqvine_core_firebase/services/inqvine_admin_service.dart';
 import 'package:inqvine_core_firebase/services/inqvine_auth_service.dart';
@@ -21,11 +22,14 @@ class InqvineCoreFirebase {
   static InqvineCoreFirebase get instance => _instance;
 
   Future<void> registerInqvineFirebaseServices() async {
-    await inqvine.registerService<InqvineAuthService>(authService);
-    await inqvine.registerService<InqvineAdminService>(adminService);
+    final FirebaseApp app = await Firebase.initializeApp();
+    inqvine.registerInLocator<FirebaseApp>(app);
 
     inqvine.registerInLocator<FirebaseAuth>(FirebaseAuth.instance);
     inqvine.registerInLocator<FirebaseFirestore>(FirebaseFirestore.instance);
+
+    await inqvine.registerService<InqvineAuthService>(InqvineAuthService.instance);
+    await inqvine.registerService<InqvineAdminService>(InqvineAdminService.instance);
   }
 
   FirebaseAuth get firebaseAuth => inqvine.getFromLocator<FirebaseAuth>();

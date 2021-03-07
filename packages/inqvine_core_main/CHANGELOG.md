@@ -1,3 +1,7 @@
+## [0.0.9-nullsafety.0] - Fix locator misuse
+
+* Register Firebase services correctly inside locator
+
 ## [0.0.8-nullsafety.0] - Remove DeviceInfoPlus
 
 * Remove DIP due to json issue with Android Info
