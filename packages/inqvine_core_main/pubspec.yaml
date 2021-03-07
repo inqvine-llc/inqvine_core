@@ -1,6 +1,6 @@
 name: inqvine_core_main
 description: Useful functionality, widgets, and more shared between all Inqvine products
-version: 0.0.7-nullsafety.0
+version: 0.0.8-nullsafety.0
 homepage: https://github.com/inqvine-llc
 
 environment:
@@ -25,7 +25,6 @@ dependencies:
   # Tooling
   jiffy: ^4.0.0
   crypto: ^3.0.0
-  device_info_plus: ^1.0.0
   universal_io: ^2.0.0
   beamer: ^1.0.0-nullsafety.0
 

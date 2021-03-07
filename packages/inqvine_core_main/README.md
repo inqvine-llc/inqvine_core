@@ -43,12 +43,6 @@ You can call `inqvine.` anywhere in your app to find what we support.
 
 - `inqvine.logger` -> Configuration for the logger service based on extension methods in `string_extensions`
 
-- `inqvine.windowsDeviceInfo` -> Device information for the Windows Platform
-- `inqvine.linuxDeviceInfo` -> Device information for the Linux Platform
-- `inqvine.macosDeviceInfo` -> Device information for the MacOS Platform
-- `inqvine.iosDeviceInfo` -> Device information for the iOS Platform
-- `inqvine.androidDeviceInfo` -> Device information for the Android Platform
-
 #### Extensions
 
 ##### Design extensions

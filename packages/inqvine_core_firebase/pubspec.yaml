@@ -1,6 +1,6 @@
 name: inqvine_core_firebase
 description: Seemless integration with common Firebase components for Inqvine Core
-version: 0.0.7-nullsafety.0
+version: 0.0.8-nullsafety.0
 homepage: https://github.com/inqvine-llc
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  inqvine_core_main: ^0.0.5-nullsafety.0
+  inqvine_core_main: ^0.0.7-nullsafety.0
 
   firebase_auth: ^1.0.0
   cloud_firestore: ^1.0.0

@@ -1,3 +1,7 @@
+## [0.0.8-nullsafety.0] - Remove DeviceInfoPlus
+
+* Remove DIP due to json issue with Android Info
+
 ## [0.0.7-nullsafety.0] - Additional functionality
 
 * Expose beamer delegate if used in [InqvineServices], call `inqvine.router`
