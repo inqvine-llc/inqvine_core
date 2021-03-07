@@ -14,6 +14,14 @@ To get started using this package, perform the following actions:
 1) Add `await inqvine.registerInqvineServices()` to your main.dart
 2) Optionally register a `GlobalKey<NavigatorState>` to access context anywhere using `inqvine.setNavigationKey(key)`
 
+##### Recommendations
+
+Here are some packages included with core which we recommend using.  
+This will allow parts of core to seamlessly integrate with your application.  
+
+1) Beamer (https://pub.dev/packages/beamer)
+Some parts of core may include route guards which can be integrated directly into your [BeamerRouterDelegate].
+
 #### Inqvine Service
 
 Think of this as a core place that all shared services can be accessed from.  
