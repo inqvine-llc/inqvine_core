@@ -1,6 +1,6 @@
 name: inqvine_core_main
 description: Useful functionality, widgets, and more shared between all Inqvine products
-version: 0.0.6-nullsafety.0
+version: 0.0.7-nullsafety.0
 homepage: https://github.com/inqvine-llc
 
 environment:

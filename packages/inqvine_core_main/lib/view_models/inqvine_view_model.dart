@@ -41,6 +41,14 @@ abstract class BaseViewModel extends ChangeNotifier with LifecycleMixin {
     );
   }
 
+  /// Unfocuses the current focus node, if available
+  void unfocusKeyboards() {
+    final FocusNode focusNode = Focus.of(inqvine.context);
+    if (focusNode.hasFocus) {
+      focusNode.unfocus();
+    }
+  }
+
   /// Checks if your widget is currently busy.
   /// This is triggered automatically by any call to `handleAction`
   bool get isBusy => _isBusy;
