@@ -1,3 +1,7 @@
+## [0.0.6-nullsafety.0] - Remove crashlytics support to enable Web
+
+* Remove Crashlytics for now until web is available
+
 ## [0.0.5-nullsafety.0] - (InqvineCoreFirebase) InqvineAdminService
 
 * Allow configuration of `admin_users` via a collection, and some firestore rules.
