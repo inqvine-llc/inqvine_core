@@ -1,3 +1,8 @@
+## [0.0.7-nullsafety.0] - Additional functionality
+
+* Expose beamer delegate if used in [InqvineServices], call `inqvine.router`
+* Allow unfocusing of keyboards from view models. `baseViewModel.unfocusKeyboards()`
+
 ## [0.0.6-nullsafety.0] - Remove crashlytics support to enable Web
 
 * Remove Crashlytics for now until web is available
