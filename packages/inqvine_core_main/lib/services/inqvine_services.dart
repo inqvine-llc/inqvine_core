@@ -26,9 +26,6 @@ class InqvineServices {
     return currentNavigatorKey!.currentState!.context;
   }
 
-  /// The current router, if beamer delegate is used
-  BeamerRouterDelegate get router => Beamer.of(context);
-
   final GetIt _locator = GetIt.instance;
   final EventBus _eventBus = EventBus();
 

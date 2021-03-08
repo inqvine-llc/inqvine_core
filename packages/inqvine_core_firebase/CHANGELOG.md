@@ -1,3 +1,7 @@
+## [0.0.10-nullsafety.0] - Remove beamer
+
+* Remove beamer in favour of router per project
+
 ## [0.0.9-nullsafety.0] - Fix locator misuse
 
 * Register Firebase services correctly inside locator
