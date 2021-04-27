@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  inqvine_core_main: ^0.0.10-nullsafety.0
+
   # UI
   expandable: ^5.0.1
   animations: ^2.0.0

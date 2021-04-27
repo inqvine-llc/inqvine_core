@@ -8,13 +8,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0"
-  beamer:
-    dependency: transitive
-    description:
-      name: beamer
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0-nullsafety.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -225,7 +218,7 @@ packages:
       name: inqvine_core_main
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.9-nullsafety.0"
+    version: "0.0.10-nullsafety.0"
   intl:
     dependency: transitive
     description:
