@@ -13,6 +13,11 @@ dependencies:
 
   inqvine_core_main: ^0.0.10-nullsafety.0
 
+  # Data Classes
+  protobuf: ^2.0.0
+  fixnum: ^1.0.0
+
+  # Third Party
   firebase_core: ^1.0.0
   firebase_auth: ^1.0.0
   cloud_firestore: ^1.0.0

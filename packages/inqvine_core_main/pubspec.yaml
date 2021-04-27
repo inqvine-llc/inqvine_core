@@ -21,6 +21,7 @@ dependencies:
 
   # Data Classes
   protobuf: ^2.0.0
+  fixnum: ^1.0.0
 
   # Tooling
   jiffy: ^4.0.0
