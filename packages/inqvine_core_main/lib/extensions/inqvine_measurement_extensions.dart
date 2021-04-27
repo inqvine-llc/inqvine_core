@@ -1,4 +1,4 @@
-extension InqvineIntExtensions on int {
+extension InqvineMeasurementIntExtensions on int {
   /// Converts a given number of inches to feet, returns the remaining inches
   int get getRemainderInchesFromInches {
     return this.remainder(12);
