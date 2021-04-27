@@ -1,6 +1,6 @@
 name: inqvine_core_ui
 description: Useful UI components for across applications
-version: 0.0.10-nullsafety.0
+version: 0.0.11-nullsafety.0
 homepage: https://github.com/inqvine-llc
 
 environment:
