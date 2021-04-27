@@ -89,8 +89,12 @@ This package contains a variety of basic, commonly used utility extensions (and 
 ##### Context Extensions
 Contains extensions on [BuildContext] for faster tidier use of MediaQueryData functions
 
-##### Number Extensions
+##### Measurement Extensions
 Contains extensions on [double] and [int] for converting to and from meters, feet, and inches
+
+##### Bluetooth Extensions
+Containts extensions for handling fields relating to [Bluetooth].  
+For example, RSSI signal strength.
 
 ##### String Extensions
 Contains extensions on [String] for logging events, errors, and general information

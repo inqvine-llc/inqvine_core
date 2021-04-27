@@ -1,5 +1,5 @@
-name: inqvine_core_firebase
-description: Seemless integration with common Firebase components for Inqvine Core
+name: inqvine_core_ui
+description: Useful UI components for across applications
 version: 0.0.11-nullsafety.0
 homepage: https://github.com/inqvine-llc
 
@@ -13,11 +13,12 @@ dependencies:
 
   inqvine_core_main: ^0.0.10-nullsafety.0
 
-  firebase_core: ^1.0.0
-  firebase_auth: ^1.0.0
-  cloud_firestore: ^1.0.0
-  firebase_messaging: ^9.0.0
+  # UI
+  expandable: ^5.0.1
+  animations: ^2.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter:

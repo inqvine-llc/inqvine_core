@@ -10,7 +10,8 @@ export 'extensions/inqvine_context_extensions.dart';
 export 'extensions/inqvine_crypto_extensions.dart';
 export 'extensions/inqvine_date_time_extensions.dart';
 export 'extensions/inqvine_design_extensions.dart';
-export 'extensions/inqvine_number_extensions.dart';
+export 'extensions/inqvine_bluetooth_extensions.dart';
+export 'extensions/inqvine_measurement_extensions.dart';
 export 'extensions/inqvine_string_extensions.dart';
 
 export 'helpers/inqvine_async_helpers.dart';

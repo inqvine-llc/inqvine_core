@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+message InqvineBranding {
+    enum BrandingBrightness {
+        automatic = 0;
+        light = 1;
+        dark = 2;
+    }
+
+    enum BrandingBorderType {
+        rounded = 0;
+        square = 1;
+        rounded_square = 2;
+        soft_square = 3;
+    }
+
+    string logo_url = 1;
+    string display_name = 2;
+    string google_font_family = 3;
+
+    int64 primary_color_hex = 4;
+    int64 primary_color_highlight_hex = 5;
+
+    int64 secondary_color_hex = 6;
+    int64 secondary_color_highlight_hex = 7;
+
+    int64 error_color_hex = 8;
+    int64 error_color_highlight_hex = 9;
+
+    BrandingBrightness brightness = 10;
+    BrandingBorderType border_type = 11;
+}
