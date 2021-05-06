@@ -19,10 +19,6 @@ export 'helpers/inqvine_design_helpers.dart';
 
 export 'hooks/inqvine_lifecycle_hook.dart';
 
-export 'proto/application.pb.dart';
-export 'proto/application.pbenum.dart';
-export 'proto/application.pbjson.dart';
-
 export 'services/inqvine_logger_service.dart';
 export 'services/inqvine_service_base.dart';
 export 'services/inqvine_services.dart';

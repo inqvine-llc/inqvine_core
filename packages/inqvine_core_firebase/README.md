@@ -37,6 +37,17 @@ match /admin_users/{document} {
 
 ```
 
+##### Inqvine System Service Rules
+
+To enable the [InqvineSystemService], add the following to your `firestore.rules` file.
+
+```
+match /system_status/{document} {
+    allow read: if true;
+    allow write: if false;
+}
+```
+
 #### Inqvine Auth Service
 
 *) logout (Disconnect from Firebase and set the current user to null)
@@ -46,3 +57,8 @@ match /admin_users/{document} {
 #### Inqvine Admin Service
 
 *) isAdmin (Whether or not a record for the user exists in the `admin_user` collection)
+
+#### Inqvine System Service
+
+*) applicationStatus (The current status of the system)
+*) downtimeBuilder (A widget builder to build an overlay when the application is offline if your base scaffold is wrapped in [InqvineDowntimeOverlay])
