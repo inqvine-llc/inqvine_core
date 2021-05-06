@@ -12,15 +12,17 @@ import 'dart:typed_data' as $typed_data;
 const ApplicationStatus$json = const {
   '1': 'ApplicationStatus',
   '2': const [
-    const {'1': 'is_application_online', '3': 1, '4': 1, '5': 8, '10': 'isApplicationOnline'},
-    const {'1': 'application_downtime_reason', '3': 2, '4': 3, '5': 11, '6': '.ApplicationStatus.ApplicationDowntimeReasonEntry', '10': 'applicationDowntimeReason'},
+    const {'1': 'is_online', '3': 1, '4': 1, '5': 8, '10': 'isOnline'},
+    const {'1': 'downtime_reason', '3': 2, '4': 3, '5': 11, '6': '.ApplicationStatus.DowntimeReasonEntry', '10': 'downtimeReason'},
+    const {'1': 'planned_downtime_start', '3': 3, '4': 1, '5': 3, '10': 'plannedDowntimeStart'},
+    const {'1': 'planned_downtime_finish', '3': 4, '4': 1, '5': 3, '10': 'plannedDowntimeFinish'},
   ],
-  '3': const [ApplicationStatus_ApplicationDowntimeReasonEntry$json],
+  '3': const [ApplicationStatus_DowntimeReasonEntry$json],
 };
 
 @$core.Deprecated('Use applicationStatusDescriptor instead')
-const ApplicationStatus_ApplicationDowntimeReasonEntry$json = const {
-  '1': 'ApplicationDowntimeReasonEntry',
+const ApplicationStatus_DowntimeReasonEntry$json = const {
+  '1': 'DowntimeReasonEntry',
   '2': const [
     const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
     const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
@@ -29,4 +31,4 @@ const ApplicationStatus_ApplicationDowntimeReasonEntry$json = const {
 };
 
 /// Descriptor for `ApplicationStatus`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List applicationStatusDescriptor = $convert.base64Decode('ChFBcHBsaWNhdGlvblN0YXR1cxIyChVpc19hcHBsaWNhdGlvbl9vbmxpbmUYASABKAhSE2lzQXBwbGljYXRpb25PbmxpbmUScQobYXBwbGljYXRpb25fZG93bnRpbWVfcmVhc29uGAIgAygLMjEuQXBwbGljYXRpb25TdGF0dXMuQXBwbGljYXRpb25Eb3dudGltZVJlYXNvbkVudHJ5UhlhcHBsaWNhdGlvbkRvd250aW1lUmVhc29uGkwKHkFwcGxpY2F0aW9uRG93bnRpbWVSZWFzb25FbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+final $typed_data.Uint8List applicationStatusDescriptor = $convert.base64Decode('ChFBcHBsaWNhdGlvblN0YXR1cxIbCglpc19vbmxpbmUYASABKAhSCGlzT25saW5lEk8KD2Rvd250aW1lX3JlYXNvbhgCIAMoCzImLkFwcGxpY2F0aW9uU3RhdHVzLkRvd250aW1lUmVhc29uRW50cnlSDmRvd250aW1lUmVhc29uEjQKFnBsYW5uZWRfZG93bnRpbWVfc3RhcnQYAyABKANSFHBsYW5uZWREb3dudGltZVN0YXJ0EjYKF3BsYW5uZWRfZG93bnRpbWVfZmluaXNoGAQgASgDUhVwbGFubmVkRG93bnRpbWVGaW5pc2gaQQoTRG93bnRpbWVSZWFzb25FbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');

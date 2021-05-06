@@ -1,6 +1,9 @@
 syntax = "proto3";
 
 message ApplicationStatus {
-    bool is_application_online = 1;
-    map<string, string> application_downtime_reason = 2;
+    bool is_online = 1;
+    map<string, string> downtime_reason = 2;
+    
+    int64 planned_downtime_start = 3;
+    int64 planned_downtime_finish = 4;
 }

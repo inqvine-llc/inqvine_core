@@ -19,7 +19,7 @@ class InqvineSystemService extends InqvineServiceBase {
 
   Widget Function(ApplicationStatus? applicationStatus)? downtimeBuilder;
 
-  bool get isSystemOnline => applicationStatus?.isApplicationOnline ?? false;
+  bool get isSystemOnline => applicationStatus?.isOnline ?? false;
   bool get canDisplayDowntimeScreen => downtimeBuilder != null;
 
   @override
