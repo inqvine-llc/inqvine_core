@@ -41,6 +41,18 @@ scripts:
   build:proto: >
     melos exec -c 6 -- "protoc --dart_out=grpc:lib -Ipb proto/*.proto --proto_path ."
 
+  publish:core:dry: >
+    melos publish --no-depends-on=inqvine_core_main --dry-run
+
+  publish:core: >
+    melos publish --no-depends-on=inqvine_core_main --no-dry-run
+
+  publish:all:dry: >
+    melos publish --depends-on=inqvine_core_main --dry-run
+
+  publish:all: >
+    melos publish --depends-on=inqvine_core_main --no-dry-run
+
 dev_dependencies:
   pedantic: 1.8.0
 
