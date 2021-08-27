@@ -1,3 +1,7 @@
+## [1.0.1] - Bump dependencies
+
+* Update all dependencies
+
 ## [1.0.0] - Bump dependencies
 
 * Update all dependencies to full null-safety variants
