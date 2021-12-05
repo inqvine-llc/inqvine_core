@@ -1,3 +1,9 @@
+## [1.1.1] - Riverpod migration
+
+* Update view model references to RP 1.0.1
+* Bump Firebase dependencies
+* Fix exports for Riverpod dependencies
+
 ## [1.0.1] - Bump dependencies
 
 * Update all dependencies

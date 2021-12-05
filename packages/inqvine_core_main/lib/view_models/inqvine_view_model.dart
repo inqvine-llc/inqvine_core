@@ -7,7 +7,7 @@ import '../inqvine_core_main.dart';
 ///
 /// Note: A view model can only be registered once.
 /// If a new instance of a page is made, the same view model will be used.
-T useViewModel<T extends BaseViewModel>(T Function() buildModel) {
+T useViewModel<T extends BaseViewModel>(WidgetRef ref, T Function() buildModel) {
   final bool hasOverridenViewModel = GetIt.instance.isRegistered<T>();
   T model;
 
@@ -19,7 +19,7 @@ T useViewModel<T extends BaseViewModel>(T Function() buildModel) {
   }
 
   useLifecycleHook(model);
-  useProvider(ChangeNotifierProvider<T>((_) => model));
+  ref.watch(ChangeNotifierProvider<T>((_) => model));
 
   return model;
 }
