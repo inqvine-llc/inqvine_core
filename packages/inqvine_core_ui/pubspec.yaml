@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  inqvine_core_main: ^1.1.1
+  inqvine_core_main: ^1.1.2
 
   # Data Classes
   protobuf: ^2.0.1
