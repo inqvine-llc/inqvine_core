@@ -6,7 +6,7 @@ const String _ddMMyyyyJiffyPatternDateOnly = 'dd/MM/yyyy';
 
 extension InqvineDateTimeExtensions on DateTime {
   /// Converts the given [DateTime] object to the number of seconds since epoch
-  int get asSecondsEpoch => millisecondsSinceEpoch * 1000;
+  int get asSecondsEpoch => (millisecondsSinceEpoch / 1000).floor();
 
   /// Converts the given [DateTime] object to a formatted variant.
   /// Example: 12:00pm - Fri the 5th of March
