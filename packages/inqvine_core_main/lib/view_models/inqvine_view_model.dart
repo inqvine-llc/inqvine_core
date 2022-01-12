@@ -119,6 +119,8 @@ abstract class BaseViewModel extends ChangeNotifier with LifecycleMixin {
       if (onError != null) {
         onError(ex);
       }
+
+      currentException = ex;
       rethrow;
     } finally {
       if (!skipBusyState) {

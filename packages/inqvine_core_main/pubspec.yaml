@@ -1,6 +1,6 @@
 name: inqvine_core_main
 description: Useful functionality, widgets, and more shared between all Inqvine products
-version: 1.1.1
+version: 1.1.2
 homepage: https://github.com/inqvine-llc
 
 environment:
@@ -12,10 +12,10 @@ dependencies:
     sdk: flutter
 
   # State Management
-  hooks_riverpod: ^1.0.1
-  flutter_hooks: ^0.18.0
-  flutter_riverpod: 1.0.2
-  riverpod: 1.0.2
+  hooks_riverpod: ^1.0.3
+  flutter_hooks: ^0.18.2
+  flutter_riverpod: ^1.0.3
+  riverpod: ^1.0.3
   get_it: ^7.2.0
   event_bus: ^2.0.0
 
@@ -24,7 +24,7 @@ dependencies:
   fixnum: ^1.0.0
 
   # Tooling
-  jiffy: ^4.1.0
+  jiffy: ^5.0.0
   crypto: ^3.0.1
   universal_io: ^2.0.4
 
@@ -35,7 +35,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  mockito: ^5.0.16
-  build_runner: ^2.1.5
+  mockito: ^5.0.17
+  build_runner: ^2.1.7
 
 flutter:

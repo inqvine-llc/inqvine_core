@@ -1,3 +1,8 @@
+## [1.1.2] - Minor fixes
+* Fix asSecondsEpoch returning the wrong time
+* Store handleAction error callback in view model
+* Update dependencies
+
 ## [1.1.1] - Riverpod migration
 
 * Update view model references to RP 1.0.1
