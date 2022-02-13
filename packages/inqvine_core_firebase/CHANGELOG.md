@@ -1,3 +1,6 @@
+## [1.2.0] - Add did pop and push callbacks
+* Two new callbacks added to lifecycle hook
+
 ## [1.1.2] - Minor fixes
 * Fix asSecondsEpoch returning the wrong time
 * Store handleAction error callback in view model

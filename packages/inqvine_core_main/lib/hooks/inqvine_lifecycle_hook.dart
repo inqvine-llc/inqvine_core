@@ -32,6 +32,16 @@ abstract class LifecycleMixin {
   void onPlatformBrightnessChanged() {
     'Detected brightness changed'.logDebug();
   }
+
+  @mustCallSuper
+  void onViewPop() {
+    'Detected view pop'.logDebug();
+  }
+
+  @mustCallSuper
+  void onViewPushed() {
+    'Detected view pushed'.logDebug();
+  }
 }
 
 void useLifecycleHook(LifecycleMixin handler) {
@@ -90,11 +100,13 @@ class LifecycleHookState extends HookState<void, LifecycleHook> implements Widge
 
   @override
   Future<bool> didPopRoute() {
+    hook.handler.onViewPop();
     return Future.value(false);
   }
 
   @override
   Future<bool> didPushRoute(String route) {
+    hook.handler.onViewPushed();
     return Future.value(false);
   }
 

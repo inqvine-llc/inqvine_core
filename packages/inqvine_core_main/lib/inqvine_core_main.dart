@@ -23,6 +23,8 @@ export 'services/inqvine_logger_service.dart';
 export 'services/inqvine_service_base.dart';
 export 'services/inqvine_services.dart';
 
+export 'view_models/inqvine_view_model.dart';
+
 //* External Exports
 
 export 'package:event_bus/event_bus.dart';
