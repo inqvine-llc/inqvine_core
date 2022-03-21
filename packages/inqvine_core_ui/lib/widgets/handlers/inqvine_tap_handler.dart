@@ -8,11 +8,15 @@ class InqvineTapHandler extends StatefulWidget {
     required this.child,
     required this.onTap,
     this.isEnabled = true,
+    this.opacityTarget = 0.0,
   });
 
   final Widget child;
   final bool isEnabled;
   final VoidCallback onTap;
+
+  // disable the graphical effect produced when tapping this button
+  final double opacityTarget;
 
   @override
   _InqvineTapHandlerState createState() => _InqvineTapHandlerState();
@@ -87,7 +91,12 @@ class _InqvineTapHandlerState extends State<InqvineTapHandler> with SingleTicker
     }
 
     final bool wasHeldDown = _buttonHeldDown;
-    final TickerFuture ticker = _buttonHeldDown ? _animationController!.animateTo(1.0, duration: kFadeOutDuration) : _animationController!.animateTo(0.0, duration: kFadeInDuration);
+    final TickerFuture ticker = _buttonHeldDown
+        ? _animationController!.animateTo(1.0, duration: kFadeOutDuration)
+        : _animationController!.animateTo(
+            widget.opacityTarget,
+            duration: kFadeInDuration,
+          );
     ticker.then<void>((void value) {
       if (mounted && wasHeldDown != _buttonHeldDown) {
         _animate();
