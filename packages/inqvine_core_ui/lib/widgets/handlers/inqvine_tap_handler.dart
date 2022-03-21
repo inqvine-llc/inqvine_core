@@ -15,7 +15,7 @@ class InqvineTapHandler extends StatefulWidget {
   final bool isEnabled;
   final VoidCallback onTap;
 
-  // disable the graphical effect produced when tapping this button
+  // change the change in opacity used during the on tap animation
   final double opacityTarget;
 
   @override
