@@ -1,3 +1,5 @@
+## [1.2.1] - Added opacity parameter to inqVine TapHandler
+
 ## [1.2.0] - Add did pop and push callbacks
 * Two new callbacks added to lifecycle hook
 

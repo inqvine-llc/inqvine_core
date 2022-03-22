@@ -129,7 +129,7 @@ packages:
       name: inqvine_core_main
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.0"
+    version: "1.2.1"
   intl:
     dependency: transitive
     description:
