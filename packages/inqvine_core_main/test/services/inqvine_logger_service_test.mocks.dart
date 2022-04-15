@@ -2,6 +2,7 @@
 // in inqvine_core_main/test/services/inqvine_logger_service_test.dart.
 // Do not manually edit this file.
 
+// Package imports:
 import 'package:logger/src/logger.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 

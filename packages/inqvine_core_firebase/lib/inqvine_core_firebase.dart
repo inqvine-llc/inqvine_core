@@ -11,14 +11,16 @@ export 'services/inqvine_system_service.dart';
 export 'package:firebase_auth/firebase_auth.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 
+// Package imports:
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:inqvine_core_main/inqvine_core_main.dart';
 
+// Project imports:
 import 'package:inqvine_core_firebase/services/inqvine_admin_service.dart';
 import 'package:inqvine_core_firebase/services/inqvine_auth_service.dart';
 import 'package:inqvine_core_firebase/services/inqvine_system_service.dart';
-import 'package:inqvine_core_main/inqvine_core_main.dart';
 
 InqvineCoreFirebase get inqvineFirebase => InqvineCoreFirebase.instance;
 

@@ -1,8 +1,14 @@
+// Dart imports:
 import 'dart:async';
 
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:inqvine_core_firebase/inqvine_core_firebase.dart';
+
+// Package imports:
 import 'package:inqvine_core_main/inqvine_core_main.dart';
+
+// Project imports:
+import 'package:inqvine_core_firebase/inqvine_core_firebase.dart';
 
 /// Wrap your base scaffold in this view in order to listen to downtime in the application.
 /// You can set this by configuring the [InqvineSystemService] with a [downtimeBuilder].

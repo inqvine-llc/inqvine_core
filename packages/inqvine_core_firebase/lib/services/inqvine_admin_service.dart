@@ -1,7 +1,11 @@
+// Dart imports:
 import 'dart:async';
 
-import 'package:inqvine_core_firebase/inqvine_core_firebase.dart';
+// Package imports:
 import 'package:inqvine_core_main/inqvine_core_main.dart';
+
+// Project imports:
+import 'package:inqvine_core_firebase/inqvine_core_firebase.dart';
 
 class InqvineAdminService extends InqvineServiceBase {
   InqvineAdminService._privateConstructor();

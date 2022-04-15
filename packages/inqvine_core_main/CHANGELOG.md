@@ -1,3 +1,7 @@
+## [1.3.0] - Add simulator package
+* Enable simulation of UIs and actions through Device Preview
+* Update of current dependencies
+
 ## [1.2.1] - Added opacity parameter to inqVine TapHandler
 
 ## [1.2.0] - Add did pop and push callbacks

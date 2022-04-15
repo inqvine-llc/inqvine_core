@@ -1,5 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
 import '../inqvine_core_main.dart';
 
 /// Registers a class extending `BaseViewModel` inside of the locator.

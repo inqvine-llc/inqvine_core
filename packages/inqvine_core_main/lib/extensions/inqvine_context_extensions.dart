@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import '../inqvine_core_main.dart';
 
 extension InqvineContextExtensions on BuildContext {
