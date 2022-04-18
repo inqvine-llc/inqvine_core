@@ -4,6 +4,8 @@ export 'handlers/inqvine_simulator_handler.dart';
 
 export 'interfaces/simulation_actionable.dart';
 
+export 'observers/inqvine_simulation_observer.dart';
+
 export 'plugins/fake_action_plugin.dart';
 export 'plugins/view_selection_plugin.dart';
 

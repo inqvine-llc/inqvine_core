@@ -2,15 +2,27 @@ import 'package:inqvine_core_simulate/inqvine_core_simulate.dart';
 import 'package:inqvine_starter_project/pages/todo/view_models/todo_view_model.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MockToDoViewModel extends Mock implements ToDoViewModel, SimulationActionable {
-  MockToDoViewModel._privateConstructor();
-  static final MockToDoViewModel _instance = MockToDoViewModel._privateConstructor();
-  static MockToDoViewModel get instance => _instance;
+class MockTodoViewModel extends Mock implements TodoViewModel, SimulationActionable {
+  MockTodoViewModel._privateConstructor();
+  static final MockTodoViewModel _instance = MockTodoViewModel._privateConstructor();
+  static MockTodoViewModel get instance => _instance;
+
+  int _counter = 0;
+
+  @override
+  int get counter => _counter;
+
+  @override
+  void incrementCounter() {
+    _counter++;
+    InqvineSimulatable.forceRebuild();
+  }
 
   @override
   Map<String, Function> get actions => <String, Function>{
-        'Clear list': () {
-          notifyListeners();
+        'Reset counter': () {
+          _counter = 0;
+          InqvineSimulatable.forceRebuild();
         }
       };
 }
