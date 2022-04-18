@@ -1,13 +1,16 @@
 library inqvine_core_simulate;
 
-export 'events/fake_model_action_event.dart';
-export 'events/fake_model_change_event.dart';
-
 export 'handlers/inqvine_simulator_handler.dart';
 
-export 'models/inqvine_fake.dart';
+export 'interfaces/simulation_actionable.dart';
 
 export 'plugins/fake_action_plugin.dart';
 export 'plugins/view_selection_plugin.dart';
 
+export 'types/simulatable_go_route.dart';
+
+export 'widgets/inqvine_simulatable_app.dart';
 export 'widgets/inqvine_simulatable.dart';
+
+// Third Party
+export 'package:go_router/go_router.dart';

@@ -1,37 +1,64 @@
 // Flutter imports:
-import 'package:flutter/material.dart';
+import 'dart:async';
 
 // Package imports:
+import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:inqvine_core_main/inqvine_core_main.dart';
 
 // Project imports:
 import '../inqvine_core_simulate.dart';
 
-class FakeActionPlugin extends StatelessWidget {
+class FakeActionPlugin extends StatefulWidget {
   const FakeActionPlugin({Key? key}) : super(key: key);
 
   @override
+  State<FakeActionPlugin> createState() => _FakeActionPluginState();
+
+  static StreamController fakeActionController = StreamController.broadcast();
+}
+
+class _FakeActionPluginState extends State<FakeActionPlugin> {
+  StreamSubscription<dynamic>? rebuildSubscription;
+
+  @override
+  void initState() {
+    rebuildSubscription = FakeActionPlugin.fakeActionController.stream.listen(onRebuildRequested);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    rebuildSubscription?.cancel();
+    super.dispose();
+  }
+
+  void onRebuildRequested(dynamic event) {
+    if (!mounted) {
+      return;
+    }
+
+    'Rebuilding actions for mocks'.logInfo();
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final Type? currentModelType = InqvineSimulatorHandler.instance.currentModelType;
-    final InqvineFake<dynamic>? currentFakeModel = InqvineSimulatorHandler.instance.currentPageFakes[currentModelType];
+    final SimulatableGoRoute? currentRoute = InqvineSimulatorHandler.instance.currentRoute;
 
     return ToolPanelSection(
       title: 'Actions',
       children: <Widget>[
-        if (currentFakeModel == null || currentFakeModel.actions.keys.isEmpty) ...<Widget>[
+        if (currentRoute == null) ...<Widget>[
           const ListTile(
             title: Text('No actions available for this view'),
           ),
         ],
-        if (currentFakeModel != null && currentFakeModel.actions.keys.isNotEmpty) ...<Widget>[
-          for (final String key in currentFakeModel.actions.keys)
+        if (currentRoute != null) ...<Widget>[
+          for (final String key in currentRoute.fakeModel.actions.keys)
             ListTile(
               title: Text(key),
-              onTap: () {
-                currentFakeModel.actions[key]!();
-                inqvine.publishEvent(FakeModelActionEvent(currentFakeModel, key));
-              },
+              onTap: () => InqvineSimulatorHandler.instance.onActionSelected(key),
             ),
         ],
       ],

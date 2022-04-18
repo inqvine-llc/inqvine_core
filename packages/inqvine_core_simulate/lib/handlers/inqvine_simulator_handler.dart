@@ -9,17 +9,21 @@ class InqvineSimulatorHandler {
   static final InqvineSimulatorHandler _instance = InqvineSimulatorHandler._privateConstructor();
   static InqvineSimulatorHandler get instance => _instance;
 
-  final Map<Type, InqvineFake> currentPageFakes = <Type, InqvineFake>{};
+  SimulatableGoRoute? currentRoute;
+  bool isEnabled = false;
 
-  Type? currentModelType;
-
-  void attemptRegisterFakesOnBuild(Type type, InqvineFake fake) {
-    currentPageFakes[type] = fake;
+  void onRouteSelected(SimulatableGoRoute route, Object model) {
+    currentRoute = route;
+    FakeActionPlugin.fakeActionController.sink.add(null);
   }
 
-  void forceRebuild() {
-    final InqvineFake mockFake = InqvineFake(model: null, title: '', description: '');
-    final FakeModelActionEvent event = FakeModelActionEvent(mockFake, '');
-    inqvine.publishEvent(event);
+  void onActionSelected(String action) {
+    if (currentRoute == null || !currentRoute!.fakeModel.actions.containsKey(action)) {
+      'No action found: $action'.logError();
+      return;
+    }
+
+    currentRoute?.fakeModel.actions[action]!();
+    FakeActionPlugin.fakeActionController.sink.add(null);
   }
 }

@@ -1,0 +1,4 @@
+enum ApplicationEnvironment {
+  dev,
+  simulate,
+}
