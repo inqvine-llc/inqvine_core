@@ -1,3 +1,6 @@
+## [1.3.2] - Add Material app parameters
+* Include all base parameters in MaterialApp in [InqvineSimulatableApp]
+
 ## [1.3.1] - Enhance simulator
 * Simplify configuration through the use of GoRouter
 * Update readme
