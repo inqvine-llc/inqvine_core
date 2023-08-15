@@ -1,10 +1,12 @@
 // Flutter imports:
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 // Project imports:
 import '../inqvine_core_main.dart';
 
-abstract class LifecycleMixin {
+mixin LifecycleMixin {
   @mustCallSuper
   void beforeFirstRender() {
     'Detected lifecycle before first render'.logDebug();
@@ -44,6 +46,11 @@ abstract class LifecycleMixin {
   void onViewPushed() {
     'Detected view pushed'.logDebug();
   }
+
+  bool onAppExit() {
+    'Detected app exit'.logDebug();
+    return true;
+  }
 }
 
 void useLifecycleHook(LifecycleMixin handler) {
@@ -59,13 +66,14 @@ class LifecycleHook extends Hook<void> {
   HookState<void, Hook<void>> createState() => LifecycleHookState();
 }
 
-class LifecycleHookState extends HookState<void, LifecycleHook> implements WidgetsBindingObserver {
+class LifecycleHookState extends HookState<void, LifecycleHook>
+    implements WidgetsBindingObserver {
   @override
   void initHook() {
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
 
     hook.handler.beforeFirstRender();
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       hook.handler.onFirstRender();
     });
   }
@@ -81,7 +89,8 @@ class LifecycleHookState extends HookState<void, LifecycleHook> implements Widge
     }
   }
 
-  AppLifecycleState? get currentLifecycleState => WidgetsBinding.instance?.lifecycleState;
+  AppLifecycleState? get currentLifecycleState =>
+      WidgetsBinding.instance.lifecycleState;
 
   @override
   void didChangeAccessibilityFeatures() {}
@@ -114,7 +123,7 @@ class LifecycleHookState extends HookState<void, LifecycleHook> implements Widge
 
   @override
   void dispose() {
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
@@ -130,4 +139,11 @@ class LifecycleHookState extends HookState<void, LifecycleHook> implements Widge
 
   @override
   void didChangeLocales(List<Locale>? locales) {}
+
+  @override
+  Future<AppExitResponse> didRequestAppExit() async {
+    return hook.handler.onAppExit()
+        ? AppExitResponse.exit
+        : AppExitResponse.cancel;
+  }
 }

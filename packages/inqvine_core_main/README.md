@@ -1,6 +1,6 @@
 ### `inqvine_core_main`
 
-Basic tooling used through all Inqvine projects.
+Basic tooling used for rapid prototyping of application.
 
 #### Platform Support
 

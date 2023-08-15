@@ -1,50 +1,53 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: proto/application_status.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-// Dart imports:
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
 
-// Package imports:
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ApplicationStatus extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ApplicationStatus', createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isOnline')
-    ..m<$core.String, $core.String>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'downtimeReason', entryClassName: 'ApplicationStatus.DowntimeReasonEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS)
-    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'plannedDowntimeStart')
-    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'plannedDowntimeFinish')
-    ..hasRequiredFields = false
-  ;
-
-  ApplicationStatus._() : super();
   factory ApplicationStatus({
     $core.bool? isOnline,
     $core.Map<$core.String, $core.String>? downtimeReason,
     $fixnum.Int64? plannedDowntimeStart,
     $fixnum.Int64? plannedDowntimeFinish,
   }) {
-    final _result = create();
+    final $result = create();
     if (isOnline != null) {
-      _result.isOnline = isOnline;
+      $result.isOnline = isOnline;
     }
     if (downtimeReason != null) {
-      _result.downtimeReason.addAll(downtimeReason);
+      $result.downtimeReason.addAll(downtimeReason);
     }
     if (plannedDowntimeStart != null) {
-      _result.plannedDowntimeStart = plannedDowntimeStart;
+      $result.plannedDowntimeStart = plannedDowntimeStart;
     }
     if (plannedDowntimeFinish != null) {
-      _result.plannedDowntimeFinish = plannedDowntimeFinish;
+      $result.plannedDowntimeFinish = plannedDowntimeFinish;
     }
-    return _result;
+    return $result;
   }
+  ApplicationStatus._() : super();
   factory ApplicationStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ApplicationStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ApplicationStatus', createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isOnline')
+    ..m<$core.String, $core.String>(2, _omitFieldNames ? '' : 'downtimeReason', entryClassName: 'ApplicationStatus.DowntimeReasonEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS)
+    ..aInt64(3, _omitFieldNames ? '' : 'plannedDowntimeStart')
+    ..aInt64(4, _omitFieldNames ? '' : 'plannedDowntimeFinish')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -54,8 +57,10 @@ class ApplicationStatus extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ApplicationStatus copyWith(void Function(ApplicationStatus) updates) => super.copyWith((message) => updates(message as ApplicationStatus)) as ApplicationStatus; // ignore: deprecated_member_use
+  ApplicationStatus copyWith(void Function(ApplicationStatus) updates) => super.copyWith((message) => updates(message as ApplicationStatus)) as ApplicationStatus;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ApplicationStatus create() => ApplicationStatus._();
   ApplicationStatus createEmptyInstance() => create();
@@ -95,3 +100,6 @@ class ApplicationStatus extends $pb.GeneratedMessage {
   void clearPlannedDowntimeFinish() => clearField(4);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

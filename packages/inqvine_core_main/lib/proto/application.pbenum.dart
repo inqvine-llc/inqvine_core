@@ -1,24 +1,24 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: proto/application.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
-// Dart imports:
 import 'dart:core' as $core;
 
-// Package imports:
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Application_ApplicationType extends $pb.ProtobufEnum {
-  static const Application_ApplicationType development = Application_ApplicationType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'development');
-  static const Application_ApplicationType uat = Application_ApplicationType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'uat');
-  static const Application_ApplicationType alpha = Application_ApplicationType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'alpha');
-  static const Application_ApplicationType beta = Application_ApplicationType._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'beta');
-  static const Application_ApplicationType production = Application_ApplicationType._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'production');
+  static const Application_ApplicationType development = Application_ApplicationType._(0, _omitEnumNames ? '' : 'development');
+  static const Application_ApplicationType uat = Application_ApplicationType._(1, _omitEnumNames ? '' : 'uat');
+  static const Application_ApplicationType alpha = Application_ApplicationType._(2, _omitEnumNames ? '' : 'alpha');
+  static const Application_ApplicationType beta = Application_ApplicationType._(3, _omitEnumNames ? '' : 'beta');
+  static const Application_ApplicationType production = Application_ApplicationType._(4, _omitEnumNames ? '' : 'production');
 
   static const $core.List<Application_ApplicationType> values = <Application_ApplicationType> [
     development,
@@ -34,3 +34,5 @@ class Application_ApplicationType extends $pb.ProtobufEnum {
   const Application_ApplicationType._($core.int v, $core.String n) : super(v, n);
 }
 
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

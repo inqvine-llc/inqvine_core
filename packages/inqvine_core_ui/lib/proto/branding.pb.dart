@@ -1,39 +1,24 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: proto/branding.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-// Dart imports:
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
 
-// Package imports:
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-// Project imports:
 import 'branding.pbenum.dart';
 
 export 'branding.pbenum.dart';
 
 class InqvineBranding extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'InqvineBranding', createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logoUrl')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'displayName')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'googleFontFamily')
-    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'primaryColorHex')
-    ..aInt64(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'primaryColorHighlightHex')
-    ..aInt64(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'secondaryColorHex')
-    ..aInt64(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'secondaryColorHighlightHex')
-    ..aInt64(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorColorHex')
-    ..aInt64(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errorColorHighlightHex')
-    ..e<InqvineBranding_BrandingBrightness>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'brightness', $pb.PbFieldType.OE, defaultOrMaker: InqvineBranding_BrandingBrightness.automatic, valueOf: InqvineBranding_BrandingBrightness.valueOf, enumValues: InqvineBranding_BrandingBrightness.values)
-    ..e<InqvineBranding_BrandingBorderType>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'borderType', $pb.PbFieldType.OE, defaultOrMaker: InqvineBranding_BrandingBorderType.rounded, valueOf: InqvineBranding_BrandingBorderType.valueOf, enumValues: InqvineBranding_BrandingBorderType.values)
-    ..hasRequiredFields = false
-  ;
-
-  InqvineBranding._() : super();
   factory InqvineBranding({
     $core.String? logoUrl,
     $core.String? displayName,
@@ -47,44 +32,61 @@ class InqvineBranding extends $pb.GeneratedMessage {
     InqvineBranding_BrandingBrightness? brightness,
     InqvineBranding_BrandingBorderType? borderType,
   }) {
-    final _result = create();
+    final $result = create();
     if (logoUrl != null) {
-      _result.logoUrl = logoUrl;
+      $result.logoUrl = logoUrl;
     }
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (googleFontFamily != null) {
-      _result.googleFontFamily = googleFontFamily;
+      $result.googleFontFamily = googleFontFamily;
     }
     if (primaryColorHex != null) {
-      _result.primaryColorHex = primaryColorHex;
+      $result.primaryColorHex = primaryColorHex;
     }
     if (primaryColorHighlightHex != null) {
-      _result.primaryColorHighlightHex = primaryColorHighlightHex;
+      $result.primaryColorHighlightHex = primaryColorHighlightHex;
     }
     if (secondaryColorHex != null) {
-      _result.secondaryColorHex = secondaryColorHex;
+      $result.secondaryColorHex = secondaryColorHex;
     }
     if (secondaryColorHighlightHex != null) {
-      _result.secondaryColorHighlightHex = secondaryColorHighlightHex;
+      $result.secondaryColorHighlightHex = secondaryColorHighlightHex;
     }
     if (errorColorHex != null) {
-      _result.errorColorHex = errorColorHex;
+      $result.errorColorHex = errorColorHex;
     }
     if (errorColorHighlightHex != null) {
-      _result.errorColorHighlightHex = errorColorHighlightHex;
+      $result.errorColorHighlightHex = errorColorHighlightHex;
     }
     if (brightness != null) {
-      _result.brightness = brightness;
+      $result.brightness = brightness;
     }
     if (borderType != null) {
-      _result.borderType = borderType;
+      $result.borderType = borderType;
     }
-    return _result;
+    return $result;
   }
+  InqvineBranding._() : super();
   factory InqvineBranding.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory InqvineBranding.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'InqvineBranding', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'logoUrl')
+    ..aOS(2, _omitFieldNames ? '' : 'displayName')
+    ..aOS(3, _omitFieldNames ? '' : 'googleFontFamily')
+    ..aInt64(4, _omitFieldNames ? '' : 'primaryColorHex')
+    ..aInt64(5, _omitFieldNames ? '' : 'primaryColorHighlightHex')
+    ..aInt64(6, _omitFieldNames ? '' : 'secondaryColorHex')
+    ..aInt64(7, _omitFieldNames ? '' : 'secondaryColorHighlightHex')
+    ..aInt64(8, _omitFieldNames ? '' : 'errorColorHex')
+    ..aInt64(9, _omitFieldNames ? '' : 'errorColorHighlightHex')
+    ..e<InqvineBranding_BrandingBrightness>(10, _omitFieldNames ? '' : 'brightness', $pb.PbFieldType.OE, defaultOrMaker: InqvineBranding_BrandingBrightness.automatic, valueOf: InqvineBranding_BrandingBrightness.valueOf, enumValues: InqvineBranding_BrandingBrightness.values)
+    ..e<InqvineBranding_BrandingBorderType>(11, _omitFieldNames ? '' : 'borderType', $pb.PbFieldType.OE, defaultOrMaker: InqvineBranding_BrandingBorderType.rounded, valueOf: InqvineBranding_BrandingBorderType.valueOf, enumValues: InqvineBranding_BrandingBorderType.values)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -94,8 +96,10 @@ class InqvineBranding extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  InqvineBranding copyWith(void Function(InqvineBranding) updates) => super.copyWith((message) => updates(message as InqvineBranding)) as InqvineBranding; // ignore: deprecated_member_use
+  InqvineBranding copyWith(void Function(InqvineBranding) updates) => super.copyWith((message) => updates(message as InqvineBranding)) as InqvineBranding;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static InqvineBranding create() => InqvineBranding._();
   InqvineBranding createEmptyInstance() => create();
@@ -204,3 +208,6 @@ class InqvineBranding extends $pb.GeneratedMessage {
   void clearBorderType() => clearField(11);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

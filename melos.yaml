@@ -30,16 +30,16 @@ scripts:
     git clean -x -d -f -q
 
   clean:flutter: >
-    melos exec -c 6 -- "flutter clean"
+    melos exec -c 6 -- "fvm flutter clean"
 
   pub:get: >
-    melos exec -c 6 -- "flutter pub get"
+    melos exec -c 6 -- "fvm flutter pub get"
 
   build:runner: >
-    melos exec -c 6 -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    melos exec -c 6 -- "fvm flutter pub run build_runner build --delete-conflicting-outputs"
 
   build:proto: >
-    melos exec -c 6 -- "protoc --dart_out=grpc:lib -Ipb proto/*.proto --proto_path ."
+    melos exec -c 6 -- "protoc --dart_out=grpc:lib proto/*.proto --proto_path ."
 
   publish:core:dry: >
     melos publish --no-depends-on=inqvine_core_main --dry-run
@@ -52,10 +52,3 @@ scripts:
 
   publish:all: >
     melos publish --depends-on=inqvine_core_main --no-dry-run
-
-dev_dependencies:
-  pedantic: 1.8.0
-
-environment:
-  sdk: ">=2.12.0-0 <3.0.0"
-  flutter: ">=1.12.13+hotfix.5 <2.0.0"

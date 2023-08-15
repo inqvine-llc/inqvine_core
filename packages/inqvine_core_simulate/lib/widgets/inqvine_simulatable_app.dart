@@ -55,7 +55,8 @@ class InqvineSimulatableApp extends StatelessWidget {
   final bool debugShowMaterialGrid;
   final ThemeData? highContrastDarkTheme;
   final ThemeData? highContrastTheme;
-  final Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback;
+  final Locale? Function(List<Locale>?, Iterable<Locale>)?
+      localeListResolutionCallback;
   final Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback;
   final Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates;
   final String Function(BuildContext)? onGenerateTitle;
@@ -85,11 +86,13 @@ class InqvineSimulatableApp extends StatelessWidget {
         ],
         builder: (_) => MaterialApp.router(
           title: title,
-          useInheritedMediaQuery: InqvineSimulatorHandler.instance.isEnabled,
-          routeInformationParser: router.routeInformationParser,
-          routerDelegate: router.routerDelegate,
-          locale: InqvineSimulatorHandler.instance.isEnabled ? DevicePreview.locale(context) : locale,
-          builder: InqvineSimulatorHandler.instance.isEnabled ? DevicePreview.appBuilder : builder,
+          locale: InqvineSimulatorHandler.instance.isEnabled
+              ? DevicePreview.locale(context)
+              : locale,
+          builder: InqvineSimulatorHandler.instance.isEnabled
+              ? DevicePreview.appBuilder
+              : builder,
+          routerConfig: router,
           actions: actions,
           backButtonDispatcher: backButtonDispatcher,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
@@ -105,7 +108,6 @@ class InqvineSimulatableApp extends StatelessWidget {
           localizationsDelegates: localizationsDelegates,
           onGenerateTitle: onGenerateTitle,
           restorationScopeId: restorationScopeId,
-          routeInformationProvider: routeInformationProvider,
           scaffoldMessengerKey: scaffoldMessengerKey,
           scrollBehavior: scrollBehavior,
           shortcuts: shortcuts,
@@ -114,6 +116,7 @@ class InqvineSimulatableApp extends StatelessWidget {
           supportedLocales: supportedLocales,
           theme: theme,
           themeMode: themeMode,
+          useInheritedMediaQuery: InqvineSimulatorHandler.instance.isEnabled,
         ),
       ),
     );
