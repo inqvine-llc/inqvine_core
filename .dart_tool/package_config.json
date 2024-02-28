@@ -39,9 +39,9 @@
     },
     {
       "name": "cli_util",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.0",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "collection",
@@ -75,9 +75,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.1.0",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "http_parser",
@@ -99,19 +99,19 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "melos",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/melos-3.1.1",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/melos-3.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.9.1",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -123,15 +123,15 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.3",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "platform",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.0",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "pool",
@@ -207,7 +207,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.6.1",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -224,6 +224,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "web",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "yaml",
       "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.2",
       "packageUri": "lib/",
@@ -231,7 +237,7 @@
     },
     {
       "name": "yaml_edit",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/yaml_edit-2.1.1",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/yaml_edit-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -242,7 +248,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-15T21:42:41.596162Z",
+  "generated": "2024-02-28T20:25:03.085392Z",
   "generator": "pub",
-  "generatorVersion": "3.0.5"
+  "generatorVersion": "3.2.3"
 }

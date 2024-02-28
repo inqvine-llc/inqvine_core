@@ -1,3 +1,7 @@
+## [2.0.2] - Fix mouseover region in InqvineUI
+* Fixes a bug where the inqvineTapHandler would not display a proper hover state for desktop
+* Routine package update
+
 ## [2.0.1] - Routine package upgrade
 * Breaking changes for packages are here. Use this over 2.0.0 if you're up for it!
 

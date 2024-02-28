@@ -31,6 +31,17 @@ class _InqvineTapHandlerState extends State<InqvineTapHandler> with SingleTicker
   AnimationController? _animationController;
   Animation<double>? _opacityAnimation;
 
+  bool _isHovering = false;
+  bool get isHovering => _isHovering;
+  set isHovering(bool value) {
+    if (value != _isHovering) {
+      _isHovering = value;
+      if (mounted) {
+        setState(() {});
+      }
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -106,19 +117,24 @@ class _InqvineTapHandlerState extends State<InqvineTapHandler> with SingleTicker
 
   @override
   Widget build(BuildContext context) {
-    return IgnorePointer(
-      ignoring: !widget.isEnabled,
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTapDown: _handleTapDown,
-        onTapUp: _handleTapUp,
-        onTapCancel: _handleTapCancel,
-        onTap: widget.onTap,
-        child: Semantics(
-          button: true,
-          child: FadeTransition(
-            opacity: _opacityAnimation!,
-            child: widget.child,
+    return MouseRegion(
+      cursor: isHovering ? SystemMouseCursors.click : SystemMouseCursors.basic,
+      onEnter: (PointerEnterEvent event) => isHovering = true,
+      onExit: (PointerExitEvent details) => isHovering = false,
+      child: IgnorePointer(
+        ignoring: !widget.isEnabled,
+        child: GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTapDown: _handleTapDown,
+          onTapUp: _handleTapUp,
+          onTapCancel: _handleTapCancel,
+          onTap: widget.onTap,
+          child: Semantics(
+            button: true,
+            child: FadeTransition(
+              opacity: _opacityAnimation!,
+              child: widget.child,
+            ),
           ),
         ),
       ),

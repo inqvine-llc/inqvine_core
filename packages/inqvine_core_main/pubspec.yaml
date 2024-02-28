@@ -1,6 +1,6 @@
 name: inqvine_core_main
 description: Useful functionality, widgets, and more shared between all Inqvine products
-version: 2.0.1
+version: 2.0.2
 homepage: https://github.com/inqvine-llc
 
 environment:

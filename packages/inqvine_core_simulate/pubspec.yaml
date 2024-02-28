@@ -1,6 +1,6 @@
 name: inqvine_core_simulate
 description: Build mock UIs and action mocks from within a simulator
-version: 2.0.1
+version: 2.0.2
 homepage: https://github.com/inqvine-llc
 
 environment:
@@ -14,7 +14,7 @@ dependencies:
   go_router: ^10.0.0
   mocktail: ^1.0.0
   device_preview: ^1.1.0
-  inqvine_core_main: ^2.0.0
+  inqvine_core_main: ^2.0.2
 
 dev_dependencies:
   flutter_test:
