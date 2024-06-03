@@ -9,9 +9,9 @@
     },
     {
       "name": "args",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.2",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.5.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "async",
@@ -75,9 +75,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.0",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "http_parser",
@@ -93,9 +93,9 @@
     },
     {
       "name": "json_annotation",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.8.1",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "matcher",
@@ -111,7 +111,7 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -207,9 +207,9 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.2",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "typed_data",
@@ -225,9 +225,9 @@
     },
     {
       "name": "web",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.4.2",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "yaml",
@@ -237,9 +237,9 @@
     },
     {
       "name": "yaml_edit",
-      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/yaml_edit-2.2.0",
+      "rootUri": "file:///C:/Users/ryand/AppData/Local/Pub/Cache/hosted/pub.dev/yaml_edit-2.2.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "inqvine_core",
@@ -248,7 +248,10 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-02-28T20:25:03.085392Z",
+  "generated": "2024-06-03T11:11:07.953328Z",
   "generator": "pub",
-  "generatorVersion": "3.2.3"
+  "generatorVersion": "3.4.0",
+  "flutterRoot": "file:///C:/Users/ryand/fvm/versions/3.22.0",
+  "flutterVersion": "3.22.0",
+  "pubCache": "file:///C:/Users/ryand/AppData/Local/Pub/Cache"
 }

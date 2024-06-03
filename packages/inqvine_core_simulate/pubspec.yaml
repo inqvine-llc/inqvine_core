@@ -1,6 +1,6 @@
 name: inqvine_core_simulate
 description: Build mock UIs and action mocks from within a simulator
-version: 2.0.2
+version: 2.1.0
 homepage: https://github.com/inqvine-llc
 
 environment:

@@ -2,6 +2,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/src/services/predictive_back_event.dart';
 
 // Project imports:
 import '../inqvine_core_main.dart';
@@ -51,6 +52,23 @@ mixin LifecycleMixin {
     'Detected app exit'.logDebug();
     return true;
   }
+
+  void handleCancelBackGesture() {
+    'Detected cancel back gesture'.logDebug();
+  }
+
+  void handleCommitBackGesture() {
+    'Detected commit back gesture'.logDebug();
+  }
+
+  bool handleStartBackGesture(PredictiveBackEvent backEvent) {
+    'Detected start back gesture'.logDebug();
+    return true;
+  }
+
+  void handleUpdateBackGestureProgress(PredictiveBackEvent backEvent) {
+    'Detected update back gesture progress'.logDebug();
+  }
 }
 
 void useLifecycleHook(LifecycleMixin handler) {
@@ -66,8 +84,7 @@ class LifecycleHook extends Hook<void> {
   HookState<void, Hook<void>> createState() => LifecycleHookState();
 }
 
-class LifecycleHookState extends HookState<void, LifecycleHook>
-    implements WidgetsBindingObserver {
+class LifecycleHookState extends HookState<void, LifecycleHook> implements WidgetsBindingObserver {
   @override
   void initHook() {
     WidgetsBinding.instance.addObserver(this);
@@ -89,8 +106,7 @@ class LifecycleHookState extends HookState<void, LifecycleHook>
     }
   }
 
-  AppLifecycleState? get currentLifecycleState =>
-      WidgetsBinding.instance.lifecycleState;
+  AppLifecycleState? get currentLifecycleState => WidgetsBinding.instance.lifecycleState;
 
   @override
   void didChangeAccessibilityFeatures() {}
@@ -142,8 +158,26 @@ class LifecycleHookState extends HookState<void, LifecycleHook>
 
   @override
   Future<AppExitResponse> didRequestAppExit() async {
-    return hook.handler.onAppExit()
-        ? AppExitResponse.exit
-        : AppExitResponse.cancel;
+    return hook.handler.onAppExit() ? AppExitResponse.exit : AppExitResponse.cancel;
+  }
+
+  @override
+  void handleCancelBackGesture() {
+    hook.handler.handleCancelBackGesture();
+  }
+
+  @override
+  void handleCommitBackGesture() {
+    hook.handler.handleCommitBackGesture();
+  }
+
+  @override
+  bool handleStartBackGesture(PredictiveBackEvent backEvent) {
+    return hook.handler.handleStartBackGesture(backEvent);
+  }
+
+  @override
+  void handleUpdateBackGestureProgress(PredictiveBackEvent backEvent) {
+    hook.handler.handleUpdateBackGestureProgress(backEvent);
   }
 }

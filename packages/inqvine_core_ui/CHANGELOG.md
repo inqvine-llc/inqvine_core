@@ -1,3 +1,6 @@
+## [2.1.0] - Routine package upgrade
+* Support Flutter 3.22.x
+
 ## [2.0.2] - Fix mouseover region in InqvineUI
 * Fixes a bug where the inqvineTapHandler would not display a proper hover state for desktop
 * Routine package update
