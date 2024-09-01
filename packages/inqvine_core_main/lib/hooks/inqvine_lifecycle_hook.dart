@@ -69,6 +69,10 @@ mixin LifecycleMixin {
   void handleUpdateBackGestureProgress(PredictiveBackEvent backEvent) {
     'Detected update back gesture progress'.logDebug();
   }
+
+  void handleViewFocusChange(ViewFocusEvent event) {
+    'Detected view focus change'.logDebug();
+  }
 }
 
 void useLifecycleHook(LifecycleMixin handler) {
@@ -179,5 +183,10 @@ class LifecycleHookState extends HookState<void, LifecycleHook> implements Widge
   @override
   void handleUpdateBackGestureProgress(PredictiveBackEvent backEvent) {
     hook.handler.handleUpdateBackGestureProgress(backEvent);
+  }
+
+  @override
+  void didChangeViewFocus(ViewFocusEvent event) {
+    hook.handler.handleViewFocusChange(event);
   }
 }

@@ -1,3 +1,9 @@
+## [2.1.2] - Routine package upgrade
+* Bump lifecycle hook to use latest implementation
+
+## [2.1.1] - Routine package upgrade
+* Bump core simulator go router dependency
+
 ## [2.1.0] - Routine package upgrade
 * Support Flutter 3.22.x
 

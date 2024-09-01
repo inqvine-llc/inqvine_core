@@ -11,8 +11,8 @@ class InqvineSimulatable<T> extends StatefulWidget {
     required this.fakeModel,
     required this.realModel,
     required this.builder,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final T fakeModel;
   final T? realModel;

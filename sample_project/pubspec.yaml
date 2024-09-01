@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  go_router: ^10.0.0
+  go_router: ^14.2.7
   mocktail: ^1.0.0
 
   inqvine_core_simulate:

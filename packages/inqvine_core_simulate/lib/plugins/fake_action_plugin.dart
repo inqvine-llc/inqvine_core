@@ -10,7 +10,7 @@ import 'package:inqvine_core_main/inqvine_core_main.dart';
 import '../inqvine_core_simulate.dart';
 
 class FakeActionPlugin extends StatefulWidget {
-  const FakeActionPlugin({Key? key}) : super(key: key);
+  const FakeActionPlugin({super.key});
 
   @override
   State<FakeActionPlugin> createState() => _FakeActionPluginState();

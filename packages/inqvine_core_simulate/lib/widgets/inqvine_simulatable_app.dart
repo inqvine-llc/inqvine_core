@@ -34,8 +34,8 @@ class InqvineSimulatableApp extends StatelessWidget {
     this.supportedLocales = const <Locale>[Locale('en', 'US')],
     this.theme,
     this.themeMode = ThemeMode.system,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final GoRouter router;
   final List<SimulatableGoRoute> routes;

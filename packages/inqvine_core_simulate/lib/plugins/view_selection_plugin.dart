@@ -9,8 +9,8 @@ class ViewSelectionPlugin extends StatelessWidget {
   const ViewSelectionPlugin({
     required this.simulatedRoutes,
     required this.router,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final List<SimulatableGoRoute> simulatedRoutes;
   final GoRouter router;

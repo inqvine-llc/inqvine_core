@@ -1,6 +1,6 @@
 name: inqvine_core_ui
 description: Useful UI components for across applications
-version: 2.1.0
+version: 2.1.2
 homepage: https://github.com/inqvine-llc
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  inqvine_core_main: ^2.0.2
+  inqvine_core_main: ^2.1.1
 
   # Data Classes
   protobuf: ^3.1.0
