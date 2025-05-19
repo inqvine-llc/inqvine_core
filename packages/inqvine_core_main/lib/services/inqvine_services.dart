@@ -29,18 +29,17 @@ class InqvineServices {
   }
 
   final GetIt _locator = GetIt.instance;
-  final EventBus _eventBus = EventBus();
 
   /// Set a new navigator key for the application.
   void setNavigationKey(GlobalKey<NavigatorState> navigatorKey) => _currentNavigatorKey = navigatorKey;
 
   /// Publish an object across the system event bus.
   /// This can then be picked up using `inqvine.getEventStream`
-  void publishEvent<T>(T event) => _eventBus.fire(event);
+  void publishEvent<T>(T event) => eventBus.fire(event);
 
   /// Listen to an event bus stream.
   /// Publish new events with `inqvine.publishEvent`.
-  Stream<T> getEventStream<T>() => _eventBus.on<T>();
+  Stream<T> getEventStream<T>() => eventBus.on<T>();
 
   /// Reset the application DI container
   Future<void> resetLocator() => _locator.reset();
@@ -70,13 +69,16 @@ class InqvineServices {
   }
 
   /// Initialize Inqvine services, registering all common services
-  Future<void> registerInqvineServices() async {
-    'Registering Inqvine services'.logDebug();
-    await registerService(InqvineLoggerService.instance);
-  }
+  Future<void> registerInqvineServices({
+    bool syncEventBus = false,
+  }) async {
+    registerInLocator<EventBus>(EventBus(sync: syncEventBus));
 
-  //* External Service Getters
+    'Registering Inqvine services'.logDebug();
+    await registerService<InqvineLoggerService>(InqvineLoggerService.instance);
+  }
 
   //* Internal Service Getters
   InqvineLoggerService get logger => getFromLocator<InqvineLoggerService>();
+  EventBus get eventBus => getFromLocator<EventBus>();
 }
